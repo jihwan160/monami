@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.scss'
 import styled from 'styled-components'
-import a from './../../img/sns_facebook.gif'
 
 const HTCover = styled.div`
     height: 58px;
@@ -57,6 +56,32 @@ const HTRight = styled.div`
         width: 0;
     }
 `;
+
+const GnbCover = styled.div`
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89px;
+`;
+
+const Logo = styled.div`
+    width: 162px;
+    & > img {
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+const GnbList = styled.div`
+    
+`;
+
+const SearchMenu = styled.div`
+    
+`;
+
 const Header = () => {
 
     const HeaderTop = () => {
@@ -83,7 +108,22 @@ const Header = () => {
     const Gnb = () => {
         return(
             <div>
-                
+                <GnbCover>
+                    <Logo>
+                        <img src={`${process.env.PUBLIC_URL}img/logo.jpg`} alt='logo' />
+                    </Logo>
+                    <GnbList>
+                        <li>모나미소개</li>
+                    </GnbList>
+                    <SearchMenu>
+                    <img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' />
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </SearchMenu>
+                </GnbCover>
             </div>
         )
     }
