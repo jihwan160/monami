@@ -54,6 +54,8 @@ const HTRight = styled.div`
     }
     & > li:last-child::after {
         width: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 `;
 
@@ -63,7 +65,6 @@ const GnbCover = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 89px;
 `;
 
 const Logo = styled.div`
@@ -75,11 +76,50 @@ const Logo = styled.div`
 `;
 
 const GnbList = styled.div`
-    
+    display: flex;
+    align-items: center;
+    & > li {
+        margin: 0 34px;
+    }
+    & > li:nth-child(1) {
+        margin-left: 0;
+    }
+    & > li:nth-child(6) {
+        margin-right: 0;
+    }
+    & > li > span {
+        display: block;
+        height: 89px;
+        line-height: 89px;
+        font-size: 18px;
+        color: #303030;
+        transition: all 0.3s;
+        cursor: pointer;
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    & > li:nth-child(3) span {
+        font-family: "Montserrat", sans-serif;
+    }
 `;
 
 const SearchMenu = styled.div`
-    
+    display: flex;
+    align-items: center;
+`;
+
+const Hamburger = styled.div`
+    width: 19px;
+    height: 16px;
+    margin-left: 18px;
+    cursor: pointer;
+    & > span {
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: #303030;
+        margin-bottom: 5px;
+        transform: all 0.4s;
+    }
 `;
 
 const Header = () => {
@@ -113,15 +153,38 @@ const Header = () => {
                         <img src={`${process.env.PUBLIC_URL}img/logo.jpg`} alt='logo' />
                     </Logo>
                     <GnbList>
-                        <li>모나미소개</li>
+                        <li>
+                            <span>모나미소개</span>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>모나미제품</span>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>NEWS & VIDEO</span>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>모나미 미술대회</span>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>고객지원</span>
+                            <div></div>
+                        </li>
+                        <li>
+                            <span>기업 구매 / 개발</span>
+                            <div></div>
+                        </li>
                     </GnbList>
                     <SearchMenu>
-                    <img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' />
-                        <div>
+                        <img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' />
+                        <Hamburger>
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div>
+                        </Hamburger>
                     </SearchMenu>
                 </GnbCover>
             </div>
