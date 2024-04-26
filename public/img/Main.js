@@ -48,9 +48,6 @@ const New = styled.div`
 const NewCover = styled.div`
     max-width: 1200px;
     margin: 0 auto;
-    & img {
-        cursor: pointer;
-    }
 `;
 
 const NewCoverTop = styled.div`
@@ -84,12 +81,15 @@ const NewCoverTopLeft = styled.div`
         margin-bottom: 36px;
     }
 `;
-
+const NewCoverTopRight = styled.div`
+    
+    & > img {
+        
+    }
+`;
 
 const NewCoverBot = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 22px;
+    
 `;
 
 const Main = () => {
@@ -126,9 +126,9 @@ const Main = () => {
                             <p>가장 먼저 만나는 설레는 기다림</p>
                             <img src={`${process.env.PUBLIC_URL}img/new1.jpg`} alt='1'/>
                         </NewCoverTopLeft>
-                        <div>
+                        <NewCoverTopRight>
                             <img src={`${process.env.PUBLIC_URL}img/new2.jpg`} alt='2' />
-                        </div>
+                        </NewCoverTopRight>
                     </NewCoverTop>
                     <NewCoverBot>
                         <div>
