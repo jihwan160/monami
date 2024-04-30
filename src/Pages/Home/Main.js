@@ -180,6 +180,116 @@ const VideoCover = styled.div`
     }
 `;
 
+const NewsCover = styled.div`
+    width: 100%;
+    height: 355px;
+`;
+
+const NewsInner = styled.div`
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5fr 2.5fr 2.5fr;
+`;
+
+
+const NewsLeft = styled.div`
+    padding-top: 45px;
+    padding-right: 49px;
+`;
+
+const NewsTitle = styled.div`
+    position: relative;
+    margin-bottom: 15px;
+    & > h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        line-height: 120%;
+    }
+    & > h2::after {
+        content: '';
+        width: 26px;
+        height: 4px;
+        background: #c40f39;
+        margin: 5px 0 0;
+        display: block;
+    }
+
+    & > span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 11px;
+        color: #3d3e38;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #3d3e38;
+        cursor: pointer;
+    }
+`;
+
+const NewsInfo = styled.div`
+    padding: 10px 0 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bbb;
+    & img {
+        height: 100%;
+    }
+    & div:nth-child(2) {
+        width: 456px;
+        margin-top: 5px;
+        position: relative;
+    }
+    & div:nth-child(2) h2 {
+        font-size: 21px;
+        color: #000;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    & div:nth-child(2) p {
+        font-size: 14px;
+        color: #555;
+        word-break: keep-all;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    & div:nth-child(2) span {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        color: #888;
+    }
+`;
+
+const NewsInfoList = styled.div`
+    
+    & li {
+        display: flex;
+        justify-content: space-between;
+        line-height: 170%;
+        cursor: pointer;
+        & p {
+            color: #555;
+        }
+        & span {
+            color: #888;
+        }
+    }
+`;
+
+const NewsMid = styled.div`
+    
+`;
+
+const NewsRight = styled.div`
+    
+`;
+
+
 const Main = () => {
 
     const Visual = () => {
@@ -349,6 +459,51 @@ const Main = () => {
         )
     }
 
+    const NewsArea = () => {
+        return(
+            <NewsCover>
+                <NewsInner>
+                    <NewsLeft>
+                        <NewsTitle>
+                            <h2>MONAMI NEWS</h2>
+                            <span>MORE</span>
+                        </NewsTitle>
+                        <NewsInfo>
+                            <div><img src={`${process.env.PUBLIC_URL}img/news_profile.jpg`} alt='1' /></div>
+                            <div>
+                                <h2>모나미 X 오닐(O’NEILL) 협업 컬렉션 출시</h2>
+                                <p>
+									모나미 X 오닐(O'NEILL) 협업 컬렉션 출시... 153 볼펜으로 구현한 펜 드로잉 스포츠웨어 눈길- ‘모나미 패션 랩’ ..
+                                </p>
+                                <span>2024-03-25</span>
+                            </div>
+                        </NewsInfo>
+                        <NewsInfoList>
+                            <li>
+                                <p>- 모나미,신학기 대전 진행</p>
+                                <span>2024-02-19</span>
+                            </li>
+                            <li>
+                                <p>- 모나미, 공간의 가치를 높인 사무용품 브랜드 ‘LOBDA(롭다)’ 론칭</p>
+                                <span>2024-02-14</span>
+                            </li>
+                            <li>
+                                <p>- 모나미, 스타필드 수원에 모나미스토어 신규 오픈</p>
+                                <span>2024-01-25</span>
+                            </li>
+                        </NewsInfoList>
+                    </NewsLeft>
+                    <NewsMid>
+
+                    </NewsMid>
+                    <NewsRight>
+
+                    </NewsRight>
+                </NewsInner>
+            </NewsCover>
+        )
+    }
+
 
     return (
         <div>
@@ -356,6 +511,7 @@ const Main = () => {
             <NewArea />
             <Product />
             <VideoArea />
+            <NewsArea />
         </div>
     )
 }
