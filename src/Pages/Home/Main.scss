@@ -26,3 +26,18 @@
     border: 2px solid #c40f39 !important;
     color: #c40f39 !important;
 }
+
+.cursor {
+    position: absolute;
+    top: 60px;
+    .arr1 {
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+    .arr2 {
+        position: absolute;
+        right: 0;
+        top: 2px;
+    }
+}

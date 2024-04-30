@@ -48,7 +48,7 @@ const VisualImg = styled.div`
 `;
 
 const New = styled.div`
-    padding-top: 75px;
+    padding: 75px 0 90px;
 `;
 
 const NewCover = styled.div`
@@ -102,7 +102,7 @@ const ProductCover = styled.div`
     width: 100%;
     background: #eee;
     text-align: center;
-    padding-top: 70px;
+    padding: 70px 0 100px 0;
 
     & > h2{
         font-size: 32px;
@@ -124,12 +124,12 @@ const ProductCover = styled.div`
         left: 50%;
         transform: translateX(-50%);
     }
+`;
 
-    & > div {
-        margin: 40px 0;
-    }
+const TabList = styled.div`
+    margin: 40px 0;
 
-    & > div > li {
+    & > li {
         display: inline-block;
         width: 153px;
         height: 32px;
@@ -140,7 +140,8 @@ const ProductCover = styled.div`
         cursor: pointer;
         margin-left: 4px;
     }
-    & > div > li:nth-child(1) {
+
+    & > li:nth-child(1) {
         margin-left: 0;
     }
 `;
@@ -151,6 +152,32 @@ const SlideInfo = styled.div`
     padding: 0 30px;
     background: #fff;
     text-align: left;
+`;
+
+const Cursor = styled.div`
+    width: 100%;
+    border-bottom: 1px dotted #ccc;
+    & > div {
+        width: 850px;
+        position: relative;
+        margin: 0 auto;
+    }
+`;
+
+const CursorImg = styled.div`
+    width: 100px;
+    margin: 0 auto;
+    font-size: 12px;
+    & > div {
+        margin-bottom: 25px;
+    }
+`;
+
+const VideoCover = styled.div`
+    width: 100%;
+    & > video {
+        width: 100%;
+    }
 `;
 
 const Main = () => {
@@ -229,12 +256,12 @@ const Main = () => {
                     <ProductCover>
                         <h2>BEST PRODUCT</h2>
                         <p>언제 어디서나 생활 속에 함께하는 모나미</p>
-                        <div>
+                        <TabList>
                             <li className='on'>프리미엄 펜</li>
                             <li>펜·펜슬</li>
                             <li>마카·컬러링</li>
                             <li>노트·사무용품</li>
-                        </div>
+                        </TabList>
                         <div>
                             <Swiper
                                 spaceBetween={10}
@@ -255,6 +282,22 @@ const Main = () => {
 
                             </Swiper>
                         </div>
+                        <Cursor>
+                            <div className='cursor'>
+                                <span className='arr1'>
+                                    <img src={`${process.env.PUBLIC_URL}img/p_arr1.gif`} alt='p_arr1' />
+                                </span>
+                                <span className='arr2'>
+                                    <img src={`${process.env.PUBLIC_URL}img/p_arr2.gif`} alt='p_arr2' />
+                                </span>
+                                <CursorImg>
+                                    <div>
+                                        <img src={`${process.env.PUBLIC_URL}img/p_cursor.gif`} alt='p_cursor' />
+                                    </div>
+                                    DRAG & SCROLL
+                                </CursorImg>
+                            </div>
+                        </Cursor>
                     </ProductCover>
                 )
 
@@ -296,12 +339,23 @@ const Main = () => {
 
     }
 
+    const VideoArea = () => {
+        return(
+            <VideoCover>
+                <video controls muted autoPlay>
+                    <source src={`${process.env.PUBLIC_URL}img/monami_video.mp4`} type='video/mp4' />
+                </video>
+            </VideoCover>
+        )
+    }
+
 
     return (
         <div>
             <Visual />
             <NewArea />
             <Product />
+            <VideoArea />
         </div>
     )
 }
