@@ -118,11 +118,8 @@ const ProductCover = styled.div`
         display: block;
         width: 26px;
         height: 4px;
-        margin: 10px 0;
+        margin: 10px auto;
         background: #c40f39;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
     }
 `;
 
@@ -174,11 +171,12 @@ const CursorImg = styled.div`
 `;
 
 const VideoCover = styled.div`
-    width: 100%;
     & > video {
         width: 100%;
     }
 `;
+
+// news
 
 const NewsCover = styled.div`
     width: 100%;
@@ -282,13 +280,108 @@ const NewsInfoList = styled.div`
 `;
 
 const NewsMid = styled.div`
-    
+    background-image: url('./../../img/inquiry_bg.jpg');
+    width: 349px;
+    height: 355px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    & > div {
+        margin-top: 65px;
+        margin-bottom: 15px;
+    }
+    & h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        line-height: 120%;
+    }
+    & h2::after {
+        content: '';
+        width: 26px;
+        height: 4px;
+        display: block;
+        background: #c40f39;
+        margin: 10px auto;
+    }
+    & p {
+        color: #6a6a6a;
+        line-height: 160%;
+        margin-bottom: 45px;
+    }
 `;
 
 const NewsRight = styled.div`
-    
+    background-image: url('./../../img/shop_bg.png');
+    width: 349px;
+    height: 355px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    & > div {
+        margin-top: 65px;
+        margin-bottom: 15px;
+    }
+    & h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        line-height: 120%;
+    }
+    & h2::after {
+        content: '';
+        width: 26px;
+        height: 4px;
+        display: block;
+        background: #c40f39;
+        margin: 10px auto;
+    }
+    & p {
+        color: #6a6a6a;
+        line-height: 160%;
+        margin-bottom: 45px;
+    }
 `;
 
+const InquiryButton = styled.button`
+    display: block;
+    width: 167px;
+    height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    color: #c40f39;
+    font-weight: 500;
+    border: 2px solid #c40f39;
+    transition: all 0.6s;
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    &:hover {
+        background: #c40f39;
+        color: #fff;
+        transition: all 0.6s;
+    }
+`;
+
+const BuyButton = styled.button`
+    display: block;
+    width: 167px;
+    height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    color: #c40f39;
+    font-weight: 500;
+    border: 2px solid #c40f39;
+    transition: all 0.6s;
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    &:hover {
+        background: #c40f39;
+        color: #fff;
+        transition: all 0.6s;
+    }
+`;
 
 const Main = () => {
 
@@ -494,10 +587,30 @@ const Main = () => {
                         </NewsInfoList>
                     </NewsLeft>
                     <NewsMid>
-
+                        <div>
+                            <img  src={`${process.env.PUBLIC_URL}img/inquiry_tit_bg.png`} alt='inquiry_tit_bg' />
+                        </div>
+                        <h2>INQUIRY</h2>
+                        <p>
+                            언제나 소중한 의견에 귀 기울이겠습니다.<br />
+                            궁금한 사항은 문의하세요.
+                        </p>
+                        <InquiryButton>
+                            INQUIRY NOW
+                        </InquiryButton>
                     </NewsMid>
                     <NewsRight>
-
+                        <div>
+                            <img  src={`${process.env.PUBLIC_URL}img/brandstore_tit_bg.png`} alt='brandstore_tit_bg' />
+                        </div>
+                        <h2>모나미 네이버 브랜드스토어</h2>
+                        <p>
+                            모나미 공식 쇼핑몰입니다.<br />
+                            공식몰만의 다양한 혜택을 만나보세요.
+                        </p>
+                        <BuyButton>
+                            BUY NOW
+                        </BuyButton>
                     </NewsRight>
                 </NewsInner>
             </NewsCover>
