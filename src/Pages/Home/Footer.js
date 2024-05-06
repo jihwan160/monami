@@ -183,7 +183,7 @@ const Footer = () => {
                                 <option hidden>FAMILY SITE</option>
                                 <option>모나미몰</option>
                                 <option>모나르떼</option>
-                                <option>모나미 컨셉스토어</option>
+                                <option>모나미 컨셉스토어</option> 
                             </select>
                         </FooterBotRight>
                     </FooterBot>
