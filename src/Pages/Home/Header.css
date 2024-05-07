@@ -1,3 +1,47 @@
-body #header {
-  width: 100%;
+body #header .gnb {
+  position: relative;
+}
+body #header .gnb:hover span {
+  color: #c40f39;
+  transition: all 0.3s;
+}
+body #header .gnb:hover .subMenu {
+  opacity: 1;
+}
+body #header .gnb:nth-child(3) .subMenu {
+  left: -50px;
+}
+body #header .gnb:nth-child(4) .subMenu {
+  left: -54px;
+}
+body #header .gnb:nth-child(6) .subMenu {
+  left: -54px;
+}
+body #header .gnb .subMenu {
+  opacity: 0;
+  text-align: center;
+  width: 180px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: -78px;
+  z-index: 100;
+  padding: 12px 25px;
+  transition: all 0.3s;
+}
+body #header .gnb .subMenu p {
+  border-bottom: 1px solid #e1e1e1;
+}
+body #header .gnb .subMenu p:last-child {
+  border-bottom: 0px;
+}
+body #header .gnb .subMenu p .menu {
+  text-decoration: none;
+  display: block;
+  height: 49px;
+  line-height: 49px;
+  font-size: 14px;
+  color: #6e6e6e;
+  transition: all 0.3s;
 }/*# sourceMappingURL=Header.css.map */

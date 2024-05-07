@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.scss'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const HTCover = styled.div`
     height: 58px;
@@ -146,6 +147,7 @@ const Header = () => {
     }
 
     const Gnb = () => {
+
         return(
             <div>
                 <GnbCover>
@@ -153,29 +155,107 @@ const Header = () => {
                         <img src={`${process.env.PUBLIC_URL}img/logo.jpg`} alt='logo' />
                     </Logo>
                     <GnbList>
-                        <li>
+                        <li className='gnb'>
                             <span>모나미소개</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>CEO 메시지</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>회사정보</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>회사연혁</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>윤리강령</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>투자정보</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>CI</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>채용정보</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>찾아오시는 길</Link>
+                                </p>
+                            </div>
                         </li>
-                        <li>
+                        <li className='gnb'>
                             <span>모나미제품</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>프리미엄 펜</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>펜·펜슬</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>마카·컬러링</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>노트·사무용품</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>잉크·리필</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>카탈로그</Link>
+                                </p>
+                            </div>
                         </li>
-                        <li>
+                        <li className='gnb'>
                             <span>NEWS & VIDEO</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>보도자료</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>동영상자료</Link>
+                                </p>
+                            </div>
                         </li>
-                        <li>
+                        <li className='gnb'>
                             <span>모나미 미술대회</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>미술대회 소개</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>수상작 발표</Link>
+                                </p>
+                            </div>
                         </li>
-                        <li>
+                        <li className='gnb'>
                             <span>고객지원</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>자주묻는질문</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>문의하기</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>이벤트</Link>
+                                </p>
+                            </div>
                         </li>
-                        <li>
+                        <li className='gnb'>
                             <span>기업 구매 / 개발</span>
-                            <div></div>
+                            <div className='subMenu'>
+                                <p>
+                                    <Link to="#" className='menu'>대량 구매 문의</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>기업 및 단체 구매</Link>
+                                </p>
+                                <p>
+                                    <Link to="#" className='menu'>산업용 맞춤 제품개발</Link>
+                                </p>
+                            </div>
                         </li>
                     </GnbList>
                     <SearchMenu>
