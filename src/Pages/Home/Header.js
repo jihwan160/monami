@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.scss'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
@@ -66,6 +66,7 @@ const GnbCover = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 `;
 
 const Logo = styled.div`
@@ -119,11 +120,13 @@ const Hamburger = styled.div`
         display: block;
         background: #303030;
         margin-bottom: 5px;
-        transform: all 0.4s;
+        transition: all 0.4s;
     }
 `;
 
 const Header = () => {
+
+    
 
     const HeaderTop = () => {
         return(
@@ -148,6 +151,12 @@ const Header = () => {
 
     const Gnb = () => {
 
+        const [click, setClick] = useState(false);
+
+        function handleClick() {
+            setClick(!click)
+        }
+
         return(
             <div>
                 <GnbCover>
@@ -155,7 +164,7 @@ const Header = () => {
                         <img src={`${process.env.PUBLIC_URL}img/logo.jpg`} alt='logo' />
                     </Logo>
                     <GnbList>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>모나미소개</span>
                             <div className='subMenu'>
                                 <p>
@@ -184,7 +193,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </li>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>모나미제품</span>
                             <div className='subMenu'>
                                 <p>
@@ -207,7 +216,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </li>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>NEWS & VIDEO</span>
                             <div className='subMenu'>
                                 <p>
@@ -218,7 +227,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </li>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>모나미 미술대회</span>
                             <div className='subMenu'>
                                 <p>
@@ -229,7 +238,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </li>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>고객지원</span>
                             <div className='subMenu'>
                                 <p>
@@ -243,7 +252,7 @@ const Header = () => {
                                 </p>
                             </div>
                         </li>
-                        <li className='gnb'>
+                        <li className={click ? 'disabled-hover gnb' : 'gnb'}>
                             <span>기업 구매 / 개발</span>
                             <div className='subMenu'>
                                 <p>
@@ -260,11 +269,115 @@ const Header = () => {
                     </GnbList>
                     <SearchMenu>
                         <img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' />
-                        <Hamburger>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <Hamburger onClick={handleClick}>
+                            <span style={{transform : click ? 'rotate(45deg) translateY(10px)' : 'none'}}></span>
+                            <span style={{width : click ? '0' : '100%'}}></span>
+                            <span style={{transform : click ? 'rotate(-45deg)  translateY(-10px)' : 'none'}}></span>
                         </Hamburger>
+                        <div className='allMenu' style={{opacity : click ? '1' : '0'}}>
+                            <div className='allMenuList'>
+                                <h2>모나미소개</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>CEO 메시지</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>회사정보</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>회사연혁</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>윤리강령</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>투자정보</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>CI</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>채용정보</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>찾아오시는 길</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='allMenuList'>
+                                <h2>모나미제품</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>프리미엄 펜</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>펜·펜슬</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>마카·컬러링</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>노트·사무용품</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>잉크·리필</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>카탈로그</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='allMenuList'>
+                                <h2>NEWS & VIDEO</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>보도자료</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>동영상자료</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='allMenuList'>
+                                <h2>모나미 미술대회</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>미술대회 소개</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>수상작 발표</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='allMenuList'>
+                                <h2>고객지원</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>자주묻는질문</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>문의하기</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>이벤트</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='allMenuList'>
+                                <h2>기업 구매 / 개발</h2>
+                                <ul>
+                                    <li>
+                                        <p><Link to='#' className='menu'>대량 구매 문의</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>기업 및 단체 구매</Link></p>
+                                    </li>
+                                    <li>
+                                        <p><Link to='#' className='menu'>산업용 맞춤 제품개발</Link></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </SearchMenu>
                 </GnbCover>
             </div>
