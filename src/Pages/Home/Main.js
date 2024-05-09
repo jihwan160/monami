@@ -65,7 +65,7 @@ const NewCoverTop = styled.div`
     justify-content: space-between;
 `;
 const NewCoverTopLeft = styled.div`
-
+    height: 100%;
     & > h2 {
         height: 90px;
         font-size: 32px;
@@ -415,21 +415,73 @@ const Main = () => {
                                 ARRIVALS
                             </h2>
                             <p>가장 먼저 만나는 설레는 기다림</p>
-                            <img src={`${process.env.PUBLIC_URL}img/new1.jpg`} alt='1'/>
+                            <div className='imgCover'>
+                                <img src={`${process.env.PUBLIC_URL}img/new1.jpg`} alt='1'/>
+                                <div className='imgHover top49'>
+                                    <div className='align'>
+                                        <div className='cate'>PEN</div>
+                                        <div className='name'>FX ZETA C3</div>
+                                        <div className='plus'>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </NewCoverTopLeft>
-                        <div>
+                        <div className='imgCover'>
                             <img src={`${process.env.PUBLIC_URL}img/new2.jpg`} alt='2' />
+                            <div className='imgHover'>
+                                <div className='align'>
+                                    <div className='cate'>NOTE</div>
+                                    <div className='name'>지퀸스</div>
+                                    <div className='plus'>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </NewCoverTop>
                     <NewCoverBot>
-                        <div>
+                        <div className='imgCover'>
                             <img src={`${process.env.PUBLIC_URL}img/new3.jpg`} alt='3' />
+                            <div className='imgHover top3'>
+                                <div className='align'>
+                                    <div className='cate'>SHARP</div>
+                                    <div className='name'>제니스7샤프</div>
+                                    <div className='plus'>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
+                        <div className='imgCover'>
                             <img src={`${process.env.PUBLIC_URL}img/new4.jpg`} alt='4' />
+                            <div className='imgHover'>
+                                <div className='align'>
+                                    <div className='cate'>FOUNTAIN PEN</div>
+                                    <div className='name'>153 아이디 만년필</div>
+                                    <div className='plus'>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
+                        <div className='imgCover'>
                             <img src={`${process.env.PUBLIC_URL}img/new5.jpg`} alt='5' />
+                            <div className='imgHover top3'>
+                                <div className='align'>
+                                    <div className='cate'>PREMIUM PEN</div>
+                                    <div className='name'>153 리스펙트 리파인</div>
+                                    <div className='plus'>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </NewCoverBot>
                 </NewCover>

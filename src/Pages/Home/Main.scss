@@ -1,3 +1,83 @@
+
+
+.imgCover {
+    position: relative;
+    &:hover .imgHover{
+        opacity: 1;
+        transition: all 0.6s;
+    }
+    &:hover .imgHover .align .plus{
+        transform: rotateZ(0deg);
+        transition: all 0.4s 0.2s;
+    }
+    .imgHover {
+        display: table;
+        width: 95%;
+        height: 90%;
+        background: #c40f39;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.6s;
+        cursor: pointer;
+        .align {
+            display: table-cell;
+            vertical-align: middle;
+            .cate {
+                font-family: "Montserrat", sans-serif;
+                font-size: 12px;
+                letter-spacing: 3px;
+                color: #eec7d0;
+            }
+            .name {
+                font-size: 21px;
+                color: #fff;
+            }
+            .plus {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                margin: 45px auto 0;
+                transform: rotateZ(180deg);
+                transition: all 0.4s 0.2s;
+                div:nth-child(1) {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    z-index: 3;
+                    width: 100%;
+                    height: 1px;
+                    background: rgba(255, 255, 255, 0.6);
+                }
+                div:nth-child(2) {
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    z-index: 3;
+                    width: 1px;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+        
+    }
+    .top49 {
+        top: 49%;
+    }
+    .top3 {
+        height: 262px;
+        top: 3%;
+        transform: translate(-50%,0);
+    }
+}
+
+
+
 // product
 .slide {
     & img {
