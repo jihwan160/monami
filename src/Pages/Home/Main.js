@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import './Main.scss'
 
@@ -491,106 +491,142 @@ const Main = () => {
 
     const Product = () => {
 
+        const [activeTab, setActiveTab] = useState('premium');
+
+
         const list = [
             {
+                img :  `${process.env.PUBLIC_URL}img/premium11.jpg`,
+                alt : 'premium11',
+                cate : '프리미엄펜',
+                name : '프러스펜 3000 프라임',
+            },
+            {
                 img :  `${process.env.PUBLIC_URL}img/premium1.jpg`,
+                alt : 'premium1',
                 cate : '프리미엄펜',
                 name : '153 리스펙트 리파인',
             },
             {
                 img : `${process.env.PUBLIC_URL}img/premium2.jpg`,
+                alt : 'premium2',
                 cate : '만년필',
                 name : '153 아이디 만년필',
             },
         ]
 
+        const list2 = [
+            {
+                img :  `${process.env.PUBLIC_URL}img/pencil1.jpg`,
+                alt : 'pencil1',
+                cate : '샤프/샤프심',
+                name : '그리픽스 팝 샤프',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/pencil2.jpg`,
+                alt : 'pencil2',
+                cate : '수성마카',
+                name : '사인펜 슈퍼 파스텔 12색',
+            },
+        ]
 
-        switch('premium') {
-            case 'premium' :
-                return(
-                    <ProductCover>
-                        <h2>BEST PRODUCT</h2>
-                        <p>언제 어디서나 생활 속에 함께하는 모나미</p>
-                        <TabList>
-                            <li className='on'>프리미엄 펜</li>
-                            <li>펜·펜슬</li>
-                            <li>마카·컬러링</li>
-                            <li>노트·사무용품</li>
-                        </TabList>
-                        <div>
-                            <Swiper
-                                spaceBetween={10}
-                                slidesPerView={7}
-                                pagination={{ clickable: true }}
-                            >
-                                {list.map((i,index) => (
-                                <SwiperSlide className='slide' key={index}>
-                                    <div className='imgCover'>
-                                        <img src={i.img} alt='index' />
-                                    </div>
-                                    <SlideInfo>
-                                        <p className='cate'>{i.cate}</p>
-                                        <h2 className='name'>{i.name}</h2>
-                                    </SlideInfo>
-                                </SwiperSlide>
-                                ))}
+        const list3 = [
+            {
+                img :  `${process.env.PUBLIC_URL}img/maka1.jpg`,
+                alt : 'maka1',
+                cate : '워터브러쉬',
+                name : '워터 리얼 브러쉬',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka2.jpg`,
+                alt : 'maka2',
+                cate : '수성마카',
+                name : '컬러 리얼 브러쉬',
+            },
+        ]
 
-                            </Swiper>
-                        </div>
-                        <Cursor>
-                            <div className='cursor'>
-                                <span className='arr1'>
-                                    <img src={`${process.env.PUBLIC_URL}img/p_arr1.gif`} alt='p_arr1' />
-                                </span>
-                                <span className='arr2'>
-                                    <img src={`${process.env.PUBLIC_URL}img/p_arr2.gif`} alt='p_arr2' />
-                                </span>
-                                <CursorImg>
-                                    <div>
-                                        <img src={`${process.env.PUBLIC_URL}img/p_cursor.gif`} alt='p_cursor' />
-                                    </div>
-                                    DRAG & SCROLL
-                                </CursorImg>
-                            </div>
-                        </Cursor>
-                    </ProductCover>
-                )
+        const list4 = [
+            {
+                img :  `${process.env.PUBLIC_URL}img/note1.jpg`,
+                alt : 'note1',
+                cate : '노트',
+                name : '지퀀스 노트 The Color A5',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/note2.jpg`,
+                alt : 'note2',
+                cate : '풀',
+                name : '다목적으로 사용 가능한 목공 풀',
+            },
+        ]
 
-            case 'pencil' :
-                return( 
-                    <ProductCover>
-                        <h2>BEST PRODUCT</h2>
-                        <p>언제 어디서나 생활 속에 함께하는 모나미</p>
-                        <div>
-                            <li className='on'>프리미엄 펜</li>
-                            <li>펜·펜슬</li>
-                            <li>마카·컬러링</li>
-                            <li>노트·사무용품</li>
-                        </div>
-                        <div>
-                            <Swiper
-                                spaceBetween={10}
-                                slidesPerView={7}
-                                pagination={{ clickable: true }}
-                            >
-                                {list.map((i,index) => (
-                                <SwiperSlide className='slide' key={index}>
-                                    <div className='imgCover'>
-                                        <img src={i.img} alt='index' />
-                                    </div>
-                                    <SlideInfo>
-                                        <p className='cate'>{i.cate}</p>
-                                        <h2 className='name'>{i.name}</h2>
-                                    </SlideInfo>
-                                </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                    </ProductCover>
-                )
-            default : 
-                <div></div>
+        const handleTabClick = (tab) => {
+            setActiveTab(tab)
         }
+
+        const renderContent = () => {
+            switch(activeTab) {
+                case 'premium' :
+                    return renderProductList(list)
+                case 'pencil' :
+                    return renderProductList(list2)
+                case 'maka' :
+                    return renderProductList(list3)
+                case 'note' :
+                    return renderProductList(list4)
+                default :
+                    return <div></div>;
+            }
+        }
+
+        const renderProductList = (items) => (
+            <ProductCover>
+                <h2>BEST PRODUCT</h2>
+                <p>언제 어디서나 생활 속에 함께하는 모나미</p>
+                <TabList>
+                    <li onClick={()=>handleTabClick('premium')} className={activeTab === 'premium' ? 'on' : ''}>프리미엄 펜</li>
+                    <li onClick={()=>handleTabClick('pencil')} className={activeTab === 'pencil' ? 'on' : ''}>펜·펜슬</li>
+                    <li onClick={()=>handleTabClick('maka')} className={activeTab === 'maka' ? 'on' : ''}>마카·컬러링</li>
+                    <li onClick={()=>handleTabClick('note')} className={activeTab === 'note' ? 'on' : ''}>노트·사무용품</li>
+                </TabList>
+                <div>
+                    <Swiper
+                        spaceBetween={10}
+                        slidesPerView={7}
+                        pagination={{ clickable: true }}
+                    >
+                        {items.map((i,index) => (
+                        <SwiperSlide className='slide' key={index}>
+                            <div className='imgCover'>
+                                <img src={i.img} alt={i.alt} />
+                            </div>
+                            <SlideInfo>
+                                <p className='cate'>{i.cate}</p>
+                                <h2 className='name'>{i.name}</h2>
+                            </SlideInfo>
+                        </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+                <Cursor>
+                    <div className='cursor'>
+                        <span className='arr1'>
+                            <img src={`${process.env.PUBLIC_URL}img/p_arr1.gif`} alt='p_arr1' />
+                        </span>
+                        <span className='arr2'>
+                            <img src={`${process.env.PUBLIC_URL}img/p_arr2.gif`} alt='p_arr2' />
+                        </span>
+                        <CursorImg>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}img/p_cursor.gif`} alt='p_cursor' />
+                            </div>
+                            DRAG & SCROLL
+                        </CursorImg>
+                    </div>
+                </Cursor>
+            </ProductCover>
+        )
+        return renderContent();
 
     }
 
