@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.scss'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
@@ -126,7 +126,20 @@ const Hamburger = styled.div`
 
 const Header = () => {
 
-    
+    const [isFix, SetIsFix] = useState(false);
+
+    useEffect(()=>{
+
+        const handleScrollevent = () => {
+            SetIsFix(window.scrollY > 0)
+        }
+
+            window.addEventListener('scroll', handleScrollevent);
+
+            return() => {
+                window.removeEventListener('scroll', handleScrollevent);
+            }
+    }, [])
 
     const HeaderTop = () => {
         return(
@@ -385,7 +398,7 @@ const Header = () => {
     }
     
     return (
-        <div id='header'>
+        <div id='header' className={isFix ? 'fixedHeader' : ''}>
             <HeaderTop />
             <Gnb />
         </div>

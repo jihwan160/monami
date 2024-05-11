@@ -94,4 +94,12 @@ body #header .allMenu .allMenuList ul li p .menu {
 }
 body #header .allMenu .allMenuList ul li p .menu:hover {
   color: #c40f39;
+}
+
+.fixedHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
 }/*# sourceMappingURL=Header.css.map */
