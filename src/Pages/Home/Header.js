@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Header.scss'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HTCover = styled.div`
     height: 58px;
@@ -20,6 +20,7 @@ const HTLeft = styled.div`
     align-items: center;
     & > div {
         margin-left: 8px;
+        cursor: pointer;
     }
     & > select {
         width: 86px;
@@ -31,6 +32,7 @@ const HTLeft = styled.div`
         font-size: 12px;
         color: #000;
         font-family: "Montserrat", sans-serif;
+        cursor: pointer;
     }
     
 `;
@@ -71,6 +73,7 @@ const GnbCover = styled.div`
 
 const Logo = styled.div`
     width: 162px;
+    cursor: pointer;
     & > img {
         width: 100%;
         height: 100%;
@@ -106,7 +109,10 @@ const GnbList = styled.div`
 
 const SearchMenu = styled.div`
     display: flex;
-    align-items: center;
+    &>div {
+        cursor: pointer;
+        
+    }
 `;
 
 const Hamburger = styled.div`
@@ -163,6 +169,8 @@ const Header = () => {
     }
 
     const Gnb = () => {
+        
+        const navigate = useNavigate(null);
 
         const [click, setClick] = useState(false);
 
@@ -173,7 +181,7 @@ const Header = () => {
         return(
             <div>
                 <GnbCover>
-                    <Logo>
+                    <Logo onClick={()=>{navigate('/')}}>
                         <img src={`${process.env.PUBLIC_URL}img/logo.jpg`} alt='logo' />
                     </Logo>
                     <GnbList>
@@ -281,13 +289,13 @@ const Header = () => {
                         </li>
                     </GnbList>
                     <SearchMenu>
-                        <img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' />
+                        <div><img src={`${process.env.PUBLIC_URL}img/btn_search.gif`} alt='btn_search' /></div>
                         <Hamburger onClick={handleClick}>
                             <span style={{transform : click ? 'rotate(45deg) translateY(10px)' : 'none'}}></span>
                             <span style={{width : click ? '0' : '100%'}}></span>
                             <span style={{transform : click ? 'rotate(-45deg)  translateY(-10px)' : 'none'}}></span>
                         </Hamburger>
-                        <div className='allMenu' style={{opacity : click ? '1' : '0'}}>
+                        <div className='allMenu' style={{display : click ? 'grid' : 'none'}}>
                             <div className='allMenuList'>
                                 <h2>모나미소개</h2>
                                 <ul>

@@ -9,7 +9,7 @@ body #header .gnb:hover span {
   transition: all 0.3s;
 }
 body #header .gnb:hover .subMenu {
-  opacity: 1;
+  display: block;
 }
 body #header .gnb:nth-child(3) .subMenu {
   left: -50px;
@@ -21,7 +21,7 @@ body #header .gnb:nth-child(6) .subMenu {
   left: -54px;
 }
 body #header .gnb .subMenu {
-  opacity: 0;
+  display: none;
   text-align: center;
   width: 180px;
   height: auto;
@@ -48,18 +48,20 @@ body #header .gnb .subMenu p .menu {
   color: #6e6e6e;
   transition: all 0.3s;
 }
+body #header .gnb .subMenu p .menu:hover {
+  color: #c40f39;
+}
 body #header .allMenu {
   position: absolute;
   left: 0;
   top: 100%;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 0 #ddd inset;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  opacity: 0;
   transition: all 0.4s;
 }
 body #header .allMenu .allMenuList {
