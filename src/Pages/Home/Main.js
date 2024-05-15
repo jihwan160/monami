@@ -513,6 +513,54 @@ const Main = () => {
                 cate : '만년필',
                 name : '153 아이디 만년필',
             },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium3.jpg`,
+                alt : 'premium3',
+                cate : '만년필',
+                name : '153 네오 만년필 EF',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium4.jpg`,
+                alt : 'premium4',
+                cate : '프리미엄펜',
+                name : '153 블랙 & 화이트',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium5.jpg`,
+                alt : 'premium5',
+                cate : '프리미엄펜',
+                name : '153 골드',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium6.jpg`,
+                alt : 'premium6',
+                cate : '프리미엄펜',
+                name : '153 아이디',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium7.jpg`,
+                alt : 'premium7',
+                cate : '프리미엄펜',
+                name : '60주년 프러스펜 3000 데스크펜 스페셜 에디션',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium8.jpg`,
+                alt : 'premium8',
+                cate : '고급샤프',
+                name : '153 아이디 샤프',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium9.jpg`,
+                alt : 'premium9',
+                cate : '프리미엄펜',
+                name : '153 네오',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/premium10.jpg`,
+                alt : 'premium10',
+                cate : '프리미엄펜',
+                name : '153 리스펙트',
+            },
         ]
 
         const list2 = [
