@@ -496,67 +496,67 @@ const Main = () => {
 
         const list = [
             {
-                img :  `${process.env.PUBLIC_URL}img/premium11.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/premium/premium11.jpg`,
                 alt : 'premium11',
                 cate : '프리미엄펜',
                 name : '프러스펜 3000 프라임',
             },
             {
-                img :  `${process.env.PUBLIC_URL}img/premium1.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/premium/premium1.jpg`,
                 alt : 'premium1',
                 cate : '프리미엄펜',
                 name : '153 리스펙트 리파인',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium2.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium2.jpg`,
                 alt : 'premium2',
                 cate : '만년필',
                 name : '153 아이디 만년필',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium3.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium3.jpg`,
                 alt : 'premium3',
                 cate : '만년필',
                 name : '153 네오 만년필 EF',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium4.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium4.jpg`,
                 alt : 'premium4',
                 cate : '프리미엄펜',
                 name : '153 블랙 & 화이트',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium5.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium5.jpg`,
                 alt : 'premium5',
                 cate : '프리미엄펜',
                 name : '153 골드',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium6.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium6.jpg`,
                 alt : 'premium6',
                 cate : '프리미엄펜',
                 name : '153 아이디',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium7.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium7.jpg`,
                 alt : 'premium7',
                 cate : '프리미엄펜',
                 name : '60주년 프러스펜 3000 데스크펜 스페셜 에디션',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium8.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium8.jpg`,
                 alt : 'premium8',
                 cate : '고급샤프',
                 name : '153 아이디 샤프',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium9.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium9.jpg`,
                 alt : 'premium9',
                 cate : '프리미엄펜',
                 name : '153 네오',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/premium10.jpg`,
+                img : `${process.env.PUBLIC_URL}img/premium/premium10.jpg`,
                 alt : 'premium10',
                 cate : '프리미엄펜',
                 name : '153 리스펙트',
@@ -565,121 +565,121 @@ const Main = () => {
 
         const list2 = [
             {
-                img :  `${process.env.PUBLIC_URL}img/pencil1.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/pencil/pencil1.jpg`,
                 alt : 'pencil1',
                 cate : '샤프/샤프심',
                 name : '그리픽스 팝 샤프',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil2.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil2.jpg`,
                 alt : 'pencil2',
                 cate : '수성마카',
                 name : '사인펜 슈퍼 파스텔 12색',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil3.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil3.jpg`,
                 alt : 'pencil3',
                 cate : '수성마카',
                 name : '프러스펜 3000 피그먼트',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil4.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil4.jpg`,
                 alt : 'pencil4',
                 cate : '수성마카',
                 name : '라이트 칼라(화이트 축)',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil5.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil5.jpg`,
                 alt : 'pencil5',
                 cate : '유성볼펜',
                 name : 'FX ZETA C3',
             },
             {
-                img :  `${process.env.PUBLIC_URL}img/pencil6.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/pencil/pencil6.jpg`,
                 alt : 'pencil6',
                 cate : '유성볼펜',
                 name : '제니스7',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil7.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil7.jpg`,
                 alt : 'pencil7',
                 cate : '수성마카',
                 name : '프러스펜 3000 60색 세트',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil8.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil8.jpg`,
                 alt : 'pencil8',
                 cate : 'FX 153',
                 name : 'FX 153',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil9.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil9.jpg`,
                 alt : 'pencil9',
                 cate : '유성볼펜',
                 name : 'FX ZETA',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil10.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil10.jpg`,
                 alt : 'pencil10',
                 cate : '형광펜',
                 name : '에센티 트윈',
             },
             {
-                img :  `${process.env.PUBLIC_URL}img/pencil11.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/pencil/pencil11.jpg`,
                 alt : 'pencil11',
                 cate : '연필',
                 name : 'NEW 바우하우스 연필',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil12.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil12.jpg`,
                 alt : 'pencil12',
                 cate : '샤프/사프심',
                 name : '클리키',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil13.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil13.jpg`,
                 alt : 'pencil13',
                 cate : '유성볼펜',
                 name : 'BP 153',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil14.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil14.jpg`,
                 alt : 'pencil14',
                 cate : '연필',
                 name : '연필_모니주(오렌지/핑크/퍼플)',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil15.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil15.jpg`,
                 alt : 'pencil15',
                 cate : '연필',
                 name : '연필_모니주(그린/블루)',
             },
             {
-                img :  `${process.env.PUBLIC_URL}img/pencil16.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/pencil/pencil16.jpg`,
                 alt : 'pencil16',
                 cate : '사인펜',
                 name : '모니주 사인펜(핑크/블루)',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil17.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil17.jpg`,
                 alt : 'pencil17',
                 cate : '수성마카',
                 name : '라이브 칼라 DIY',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil18.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil18.jpg`,
                 alt : 'pencil18',
                 cate : '수성마카',
                 name : '프러스펜 S / 리필심',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil19.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil19.jpg`,
                 alt : 'pencil19',
                 cate : '수성마카',
                 name : '프러스펜 3000',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/pencil20.jpg`,
+                img : `${process.env.PUBLIC_URL}img/pencil/pencil20.jpg`,
                 alt : 'pencil20',
                 cate : '수성마카',
                 name : '어데나',
@@ -688,31 +688,169 @@ const Main = () => {
 
         const list3 = [
             {
-                img :  `${process.env.PUBLIC_URL}img/maka1.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/maka/maka1.jpg`,
                 alt : 'maka1',
                 cate : '워터브러쉬',
                 name : '워터 리얼 브러쉬',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/maka2.jpg`,
+                img : `${process.env.PUBLIC_URL}img/maka/maka2.jpg`,
                 alt : 'maka2',
                 cate : '수성마카',
                 name : '컬러 리얼 브러쉬',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka3.jpg`,
+                alt : 'maka3',
+                cate : '수성마카',
+                name : '붓펜 12색 세트',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka4.jpg`,
+                alt : 'maka4',
+                cate : '수성펜',
+                name : '컬러 트윈 브러쉬',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka5.jpg`,
+                alt : 'maka5',
+                cate : '크레파스',
+                name : '크레파스_모니주(옐로우)',
+            },
+            {
+                img :  `${process.env.PUBLIC_URL}img/maka/maka6.jpg`,
+                alt : 'maka6',
+                cate : '크레파스',
+                name : '크레파스_모니주(핑크)',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka7.jpg`,
+                alt : 'maka7',
+                cate : '크레파스',
+                name : '크레파스_모니주(블루)',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka8.jpg`,
+                alt : 'maka8',
+                cate : '색연필',
+                name : '종이말이 색연필_모니주(블루/핑크)',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka9.jpg`,
+                alt : 'maka9',
+                cate : '샤프식 색연필',
+                name : '샤프식 색연필_모니주(블루/핑크)',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka10.jpg`,
+                alt : 'maka10',
+                cate : '그림물감',
+                name : '그림물감_모니주(핑크)',
+            },
+            {
+                img :  `${process.env.PUBLIC_URL}img/maka/maka11.jpg`,
+                alt : 'maka11',
+                cate : '그림물감',
+                name : '그림물감_모니주(블루)',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka12.jpg`,
+                alt : 'maka12',
+                cate : '생활마카',
+                name : '세라믹마카 480 / 482',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka13.jpg`,
+                alt : 'maka13',
+                cate : '생활마카',
+                name : '패브릭마카 470',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka14.jpg`,
+                alt : 'maka14',
+                cate : '생활마카',
+                name : '데코마카 463',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka15.jpg`,
+                alt : 'maka15',
+                cate : '생활마카',
+                name : '데코마카 460',
+            },
+            {
+                img :  `${process.env.PUBLIC_URL}img/maka/maka16.jpg`,
+                alt : 'maka16',
+                cate : '수성마카',
+                name : '붓펜',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka17.jpg`,
+                alt : 'maka17',
+                cate : '생활마카',
+                name : '키친마카 420',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka18.jpg`,
+                alt : 'maka18',
+                cate : '산업마카',
+                name : '프로 페인트마카',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka19.jpg`,
+                alt : 'maka19',
+                cate : '보드마카',
+                name : '시그마플로 생잉크 보드마카 220 / 221',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/maka/maka20.jpg`,
+                alt : 'maka20',
+                cate : '생활마카',
+                name : '가든마카 450',
             },
         ]
 
         const list4 = [
             {
-                img :  `${process.env.PUBLIC_URL}img/note1.jpg`,
+                img :  `${process.env.PUBLIC_URL}img/note/note1.jpg`,
                 alt : 'note1',
                 cate : '노트',
                 name : '지퀀스 노트 The Color A5',
             },
             {
-                img : `${process.env.PUBLIC_URL}img/note2.jpg`,
+                img : `${process.env.PUBLIC_URL}img/note/note2.jpg`,
                 alt : 'note2',
                 cate : '풀',
                 name : '다목적으로 사용 가능한 목공 풀',
+            },
+            {
+                img :  `${process.env.PUBLIC_URL}img/note/note3.jpg`,
+                alt : 'note3',
+                cate : '풀',
+                name : '다목적으로 사용 가능한 목공풀 2-Way',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/note/note4.jpg`,
+                alt : 'note4',
+                cate : '풀',
+                name : '빨리 마르는 물풀',
+            },
+            {
+                img :  `${process.env.PUBLIC_URL}img/note/note5.jpg`,
+                alt : 'note5',
+                cate : '풀',
+                name : '붙였다 뗄 수 있는 메모 풀',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/note/note6.jpg`,
+                alt : 'note6',
+                cate : '풀',
+                name : '모서리에 바르기 쉬운 삼각풀',
+            },
+            {
+                img : `${process.env.PUBLIC_URL}img/note/note7.jpg`,
+                alt : 'note7',
+                cate : '풀',
+                name : '한 번에 잘 발리는 부드러운 풀',
             },
         ]
 
@@ -747,7 +885,7 @@ const Main = () => {
                 </TabList>
                 <div>
                     <Swiper
-                        spaceBetween={10}
+                        spaceBetween={9}
                         slidesPerView={7}
                         pagination={{ clickable: true }}
                     >
@@ -789,7 +927,7 @@ const Main = () => {
     const VideoArea = () => {
         return(
             <VideoCover>
-                <video controls muted autoPlay>
+                <video controls>
                     <source src={`${process.env.PUBLIC_URL}img/monami_video.mp4`} type='video/mp4' />
                 </video>
             </VideoCover>
