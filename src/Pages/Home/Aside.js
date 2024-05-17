@@ -59,23 +59,23 @@ const Aside = () => {
             <AsideTop>
                 <Link to='#'>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}img/aside1.png`} alt='aside1' />
+                        <img src={`${process.env.PUBLIC_URL}img/aside/aside1.png`} alt='aside1' />
                     </div>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}img/aside2.png`} alt='aside2' />
+                        <img src={`${process.env.PUBLIC_URL}img/aside/aside2.png`} alt='aside2' />
                     </div>
                 </Link>
             </AsideTop>
             <AsideMid>
                 <Link to='#'>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}img/aside3.png`} alt='aside3' />
+                        <img src={`${process.env.PUBLIC_URL}img/aside/aside3.png`} alt='aside3' />
                     </div>
                 </Link>
             </AsideMid>
             <AsideBot>
                 <div onClick={()=>{handleClose()}}>
-                    <img src={`${process.env.PUBLIC_URL}img/aside4.png`} alt='aside4' />
+                    <img src={`${process.env.PUBLIC_URL}img/aside/aside4.png`} alt='aside4' />
                 </div>
             </AsideBot>
         </AsideCover>

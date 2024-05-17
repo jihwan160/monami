@@ -416,7 +416,7 @@ const Main = () => {
                             </h2>
                             <p>가장 먼저 만나는 설레는 기다림</p>
                             <div className='imgCover'>
-                                <img src={`${process.env.PUBLIC_URL}img/new1.jpg`} alt='1'/>
+                                <img src={`${process.env.PUBLIC_URL}img/new/new1.jpg`} alt='1'/>
                                 <div className='imgHover top49'>
                                     <div className='align'>
                                         <div className='cate'>PEN</div>
@@ -430,7 +430,7 @@ const Main = () => {
                             </div>
                         </NewCoverTopLeft>
                         <div className='imgCover'>
-                            <img src={`${process.env.PUBLIC_URL}img/new2.jpg`} alt='2' />
+                            <img src={`${process.env.PUBLIC_URL}img/new/new2.jpg`} alt='2' />
                             <div className='imgHover'>
                                 <div className='align'>
                                     <div className='cate'>NOTE</div>
@@ -445,7 +445,7 @@ const Main = () => {
                     </NewCoverTop>
                     <NewCoverBot>
                         <div className='imgCover'>
-                            <img src={`${process.env.PUBLIC_URL}img/new3.jpg`} alt='3' />
+                            <img src={`${process.env.PUBLIC_URL}img/new/new3.jpg`} alt='3' />
                             <div className='imgHover top3'>
                                 <div className='align'>
                                     <div className='cate'>SHARP</div>
@@ -458,7 +458,7 @@ const Main = () => {
                             </div>
                         </div>
                         <div className='imgCover'>
-                            <img src={`${process.env.PUBLIC_URL}img/new4.jpg`} alt='4' />
+                            <img src={`${process.env.PUBLIC_URL}img/new/new4.jpg`} alt='4' />
                             <div className='imgHover'>
                                 <div className='align'>
                                     <div className='cate'>FOUNTAIN PEN</div>
@@ -471,7 +471,7 @@ const Main = () => {
                             </div>
                         </div>
                         <div className='imgCover'>
-                            <img src={`${process.env.PUBLIC_URL}img/new5.jpg`} alt='5' />
+                            <img src={`${process.env.PUBLIC_URL}img/new/new5.jpg`} alt='5' />
                             <div className='imgHover top3'>
                                 <div className='align'>
                                     <div className='cate'>PREMIUM PEN</div>
