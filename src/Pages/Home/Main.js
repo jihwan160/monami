@@ -9,12 +9,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const VisualImg = styled.div`
-    width: 100%;
+    max-width: 1920px;
     height: 652px;
-    background-image: url('./../../img/visual1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    display: block;
+    margin: 0 auto;
     position: relative;
+    & img {
+        margin: 0 auto;
+        display: block;
+    }
     & > div {
         position: absolute;
         left: 20%;
@@ -386,8 +389,10 @@ const BuyButton = styled.button`
 const Main = () => {
 
     const Visual = () => {
+        
         return(
             <VisualImg>
+                <img src={`${process.env.PUBLIC_URL}img/visual1.jpg`} alt='visual1' />
                 <div>
                     <h1>
                         어쩌면 삶은<br />
