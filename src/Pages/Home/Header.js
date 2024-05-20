@@ -186,10 +186,10 @@ const Header = () => {
                     </Logo>
                     <GnbList>
                         <li className={click ? 'disabled-hover gnb' : 'gnb'}>
-                            <span>모나미소개</span>
+                            <span onClick={()=>{navigate('/ceo')}}>모나미소개</span>
                             <div className='subMenu'>
                                 <p>
-                                    <Link to="#" className='menu'>CEO 메시지</Link>
+                                    <Link to="/ceo" className='menu'>CEO 메시지</Link>
                                 </p>
                                 <p>
                                     <Link to="#" className='menu'>회사정보</Link>
