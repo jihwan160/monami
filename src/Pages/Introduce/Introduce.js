@@ -63,6 +63,76 @@ const IntroduceTab = styled.div`
     }
 `;
 
+const IntroduceTitle = styled.div`
+    font-size: 38px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    & span {
+        color: #c40f39;
+    }
+    &::after {
+        content: '';
+        width: 30px;
+        height: 4px;
+        display: block;
+        background: #c40f39;
+        margin: 5px auto 95px;
+    }
+`;
+
+const IntroduceWrap = styled.div`
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    & .pht_area {
+        margin-bottom: 50px;
+        & .pht {
+            img {
+                position: relative;
+                z-index: 10;
+            }
+        }
+        & .bgbox {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            z-index: 5;
+            background: #c40f39;
+        }
+        & .slg {
+            width: 662px;
+            height: 293px;
+            position: absolute;
+            right: 0;
+            top: 58px;
+            z-index: 10;
+            background: rgba(227,227,227,1);
+            & .textarea {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 11;
+                padding: 90px 0 0 162px;
+                font-size: 36px;
+                color: #000;
+                font-weight: 300;
+                line-height: 140%;
+                & span {
+                    color: #c40f39;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+`;
+
 const Introduce = () => {
 
     const CeoArea = () => {
@@ -108,7 +178,24 @@ const Introduce = () => {
                                 </li>
                             </ul>
                     </IntroduceTab>
-                    
+                    <IntroduceTitle>
+                        CEO <span>MESSAGE</span>
+                    </IntroduceTitle>
+                    <IntroduceWrap>
+                        <div className='pht_area'>
+                            <div className='pht'>
+                                <img src={`${process.env.PUBLIC_URL}img/introduce/message_ceo.jpg`} alt='message_ceo' />
+                                <div className='bgbox'></div>
+                            </div>
+                            <div className='slg'>
+                                <img src={`${process.env.PUBLIC_URL}img/introduce/message_slg_bg.png`} alt='message_slg_bg' />
+                                <div className='textarea'>
+                                    항상 당신 곁의<br />
+                                    <span>소중한 친구</span>로 남겠습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </IntroduceWrap>
                 </>
             )
         }
