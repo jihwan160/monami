@@ -173,51 +173,119 @@ const IntroduceWrap = styled.div`
 
 // COMPANY
 
-const IntroduceConpany = styled.div`
-    max-width: 1400px;
-    margin: 0 auto;
-    & .num_title {
-        font-size: 23px;
-        color: #000;
-        font-weight: 300;
-        margin-bottom: 30px;
-        & .num {
-            display: inline-block;
-            text-align: center;
-            vertical-align: top;
-            margin-top: 5px;
-            margin-right: 5px;
-            width: 29px;
-            height: 29px;
-            line-height: 29px;
-            background: #c40f39;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 17px;
-            color: #fff;
+const IntroduceCompany = styled.div`
+    
+    & .info1 {
+        max-width: 1400px;
+        margin: 0 auto;
+        & .num_title {
+            font-size: 23px;
+            color: #000;
+            font-weight: 300;
+            margin-bottom: 30px;
+            & .num {
+                display: inline-block;
+                text-align: center;
+                vertical-align: top;
+                margin-top: 5px;
+                margin-right: 10px;
+                width: 29px;
+                height: 29px;
+                line-height: 29px;
+                background: #c40f39;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 17px;
+                color: #fff;
+            }
+        }
+        & .subsidiary {
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            & .sub1 {
+                position: relative;
+                float: left;
+                margin-bottom: 18px;
+            }
+            & .sub2 {
+                position: relative;
+                float: right;
+                margin-bottom: 18px;
+            }
+            & .sub3 {
+                position: relative;
+                float: left;
+            }
+            & .sub4 {
+                position: relative;
+                float: right;
+            }
+
+            & .titbox {
+                position: absolute;
+                left: 2%;
+                bottom: 10px;
+                /* transform: translateX(-50%); */
+                z-index: 2;
+                width: 86%;
+                height: 118px;
+                padding: 0 5%;
+                background: rgba(255,255,255,0.9);
+                text-align: center;
+                font-size: 19px;
+                color: #333;
+                display: flex;
+                align-items: center;
+                & .sbj {
+                    width: 45%;
+                    font-size: 20px;
+                    color: #333;
+                    line-height: 130%;
+                    text-align: left;
+                    & > span {
+                        color: #c40f39;
+                        font-size: 19px;
+                        font-weight: 500;
+                    }
+                }
+                & .blogo {
+                    width: 55%;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
         }
     }
-    & .subsidiary {
-        
-        &::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-        & .sub1 {
-            float: left;
-            margin-bottom: 18px;
-        }
-        & .sub2 {
-            float: right;
-            margin-bottom: 18px;
-        }
-        & .sub3 {
-            float: left;
-        }
-        & .sub4 {
-            float: right;
+
+    & .info2 {
+        max-width: 1400px;
+        margin: 130px auto;
+        & .num_title {
+            font-size: 23px;
+            color: #000;
+            font-weight: 300;
+            margin-bottom: 30px;
+            & .num {
+                display: inline-block;
+                text-align: center;
+                vertical-align: top;
+                margin-top: 5px;
+                margin-right: 10px;
+                width: 29px;
+                height: 29px;
+                line-height: 29px;
+                background: #c40f39;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 17px;
+                color: #fff;
+            }
         }
     }
+    
     
 `;
 
@@ -306,30 +374,80 @@ const Introduce = () => {
                             <IntroduceTitle>
                                 COMPANY <span>INFO</span>
                             </IntroduceTitle>
-                            <IntroduceConpany>
-                                <h2 className='num_title'>
-                                    <span className='num'>01</span>
-                                    계열사 소개
-                                </h2>
-                                <div className='subsidiary'>
-                                    <div className='sub1'>
-                                        <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img1.jpg`} alt='company_info2_img1' />
-                                        <div></div>
-                                    </div>
-                                    <div className='sub2'>
-                                        <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img2.jpg`} alt='company_info2_img2' />
-                                        <div></div>
-                                    </div>
-                                    <div className='sub3'>
-                                        <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img3.jpg`} alt='company_info2_img3' />
-                                        <div></div>
-                                    </div>
-                                    <div className='sub4'>
-                                        <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img4.jpg`} alt='company_info2_img4' />
-                                        <div></div>
+                            <IntroduceCompany>
+                                <div className='info1'>
+                                    <h2 className='num_title'>
+                                        <span className='num'>01</span>
+                                        계열사 소개
+                                    </h2>
+                                    <div className='subsidiary'>
+                                        <div className='sub1'>
+                                            <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img1.jpg`} alt='company_info2_img1' />
+                                            <div className='titbox'>
+                                                <div className='sbj'>
+                                                    PARKER/WATERMAN <br />
+                                                    TOMBOW <span>국내 공식</span> 수입업체
+                                                </div>
+                                                <div className='blogo'>
+                                                    <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_logo1.jpg`} alt='company_info2_logo1' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='sub2'>
+                                            <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img2.jpg`} alt='company_info2_img2' />
+                                            <div className='titbox'>
+                                                <div className='sbj'>
+                                                    HP전산용품 & '<span>통합출력관리</span> <br />
+                                                    <span>서비스</span>' 솔루션 공급
+                                                </div>
+                                                <div className='blogo'>
+                                                    <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_logo2.jpg`} alt='company_info2_logo2' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='sub3'>
+                                            <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img3.jpg`} alt='company_info2_img3' />
+                                            <div className='titbox'>
+                                                <div className='sbj'>
+                                                    철학, 역사, 예술, 과학, 경제를<br />
+                                                    <span>미술로 만나다</span>
+                                                </div>
+                                                <div className='blogo'>
+                                                    <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_logo3.jpg`} alt='company_info2_logo3' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='sub4'>
+                                            <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_img4.jpg`} alt='company_info2_img4' />
+                                            <div className='titbox'>
+                                                <div className='sbj'>
+                                                    모나미 문구제품<br />
+                                                    <span>전문 제조 기업</span>
+                                                </div>
+                                                <div className='blogo'>
+                                                    <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info2_logo4.jpg`} alt='company_info2_logo4' />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </IntroduceConpany>
+                                <div className='info2'>
+                                    <h2 className='num_title'>
+                                        <span className='num'>02</span>
+                                        해외법인
+                                    </h2>
+                                    <div className='oversea'>
+                                        <div>
+                                            <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info3_img1.jpg`} alt='company_info3_img1' />
+                                        </div>
+                                        <div className='infobox'>
+                                            <div className='infobox1'>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </IntroduceCompany>
                         </>
                     )
                 default :
