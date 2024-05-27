@@ -286,6 +286,59 @@ const IntroduceCompany = styled.div`
         }
     }
     
+    & .oversea {
+        & .seaimg {
+            height: 433px;
+            & > img {
+                height: 100%;
+            }
+        }
+
+        & .infobox {
+
+            & .infobox1 {
+                box-shadow: 0px -1px 0 #ddd inset;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #ddd;
+                padding: 40px;
+                & .infoboxTitle {
+                    font-size: 17px;
+                    color: #333;
+                    font-family: 'Montserrat', sans-serif;
+                    margin-bottom: 20px;
+                    & span {
+                        color: #c40f39;
+                        font-weight: 600;
+                        margin-right: 10px;
+                    }
+                }
+                & dl {
+                    display: block;
+                    margin-bottom: 5px;
+                    & dt {
+                        width: 90px;
+                        display: inline-block;
+                        font-size: 14px;
+                        color: #666;
+                    }
+                    & dd {
+                        display: inline-block;
+                        font-size: 14px;
+                        color: #999;
+                        line-height: 180%;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
+                & .link {
+                    text-decoration: none;
+                    color: #999;
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
     
 `;
 
@@ -300,6 +353,7 @@ const Introduce = () => {
         }
 
         const renderContent = () => {
+
             switch(activeTab2) {
                 case 'ceo' :
                     return(
@@ -437,11 +491,134 @@ const Introduce = () => {
                                         해외법인
                                     </h2>
                                     <div className='oversea'>
-                                        <div>
+                                        <div className='seaimg'>
                                             <img src={`${process.env.PUBLIC_URL}img/introduce/company/company_info3_img1.jpg`} alt='company_info3_img1' />
                                         </div>
                                         <div className='infobox'>
                                             <div className='infobox1'>
+                                                <div className='infoboxTitle'>
+                                                    <span>THAILAND</span>
+                                                    모나미 타일랜드 (방콕)
+                                                </div>
+                                                <dl>
+                                                    <dt>법인명</dt>
+                                                    <dd>MONAMI THAILAND</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>주소</dt>
+                                                    <dd>
+                                                        #475 Siripinyo Bldg.,12th floor, Si Ayutthaya Rd.,Khwaeng 
+                                                        ThanonPhayathai, Khet Ratchathewi, Bangkok 10400 Thailand
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>전화</dt>
+                                                    <dd>
+                                                        +66-2-640-0980-2
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>팩스</dt>
+                                                    <dd>
+                                                        +66-2-640-0980-2
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>SNS</dt>
+                                                    <dd>
+                                                    <a href="http://www.facebook.com/monami.thailand" target='_blank' rel="noopener noreferrer" className='link'>
+                                                        www.facebook.com/monami.thailand/
+                                                    </a>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div className='infobox1'>
+                                                <div className='infoboxTitle'>
+                                                    <span>THAILAND</span>
+                                                    모나미 타일랜드 (아마타 공장)
+                                                </div>
+                                                <dl>
+                                                    <dt>주소</dt>
+                                                    <dd>
+                                                        Amata City Industrial Estate 7/281 Moo. 
+                                                        6 Mabyangporn,
+                                                        Plaukdang, Rayong 21140 Thailand
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>전화</dt>
+                                                    <dd>
+                                                        +66-38-6508091-4218
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div className='infobox1'>
+                                                <div className='infoboxTitle'>
+                                                    <span>CHINA</span>
+                                                    상해 모나미 (상하이)
+                                                </div>
+                                                <dl>
+                                                    <dt>법인명</dt>
+                                                    <dd>上海慕那美文化用品有限公司  (SHANGHAI MONAMI) </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>홈페이지</dt>
+                                                    <dd>
+                                                        <a href="http://www.monami.com.cn" target='_blank' rel="noopener noreferrer" className='link'>
+                                                            www.monami.com.cn
+                                                        </a>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>주소(중문)</dt>
+                                                    <dd>
+                                                        嘉定???路1388?9??
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>주소(영문)</dt>
+                                                    <dd>
+                                                        Building No.9,?1388?,XingXian Road, Jiading District,, Shanghai, China.
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>전화</dt>
+                                                    <dd>
+                                                        +86-21-69521210-69521216
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>팩스</dt>
+                                                    <dd>
+                                                        +86-21-69521250-59160776
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>SNS</dt>
+                                                    <dd>
+                                                        <a href="http://weibo.com/shmonami" target='_blank' rel="noopener noreferrer" className='link'>
+                                                            weibo.com/shmonami
+                                                        </a>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div className='infobox1'>
+                                                <div className='infoboxTitle'>
+                                                    <span>POLAND</span>
+                                                    제니스 모나미 (바르샤바)
+                                                </div>
+                                                <dl>
+                                                    <dt>법인명</dt>
+                                                    <dd>
+                                                        ZENITH MONAMI
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>주소</dt>
+                                                    <dd>
+                                                        ul. Poleczki 23, 02-822, Warsaw, Poland.
+                                                    </dd>
+                                                </dl>
                                                 
                                             </div>
                                         </div>
