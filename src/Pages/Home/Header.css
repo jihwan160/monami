@@ -104,4 +104,5 @@ body #header .allMenu .allMenuList ul li p .menu:hover {
   width: 100%;
   z-index: 1000;
   background: #fff;
+  border-bottom: 1px solid #eaeaea;
 }/*# sourceMappingURL=Header.css.map */

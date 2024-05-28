@@ -342,11 +342,155 @@ const IntroduceCompany = styled.div`
     
 `;
 
+const IntroduceHistory = styled.div`
+    position: relative;
+    &  .area_l {
+        width: 50%;
+        text-align: right;
+        & .area_l_title {
+            padding-right: 60px;
+            padding-bottom: 25px;
+            padding-top: 60px;
+            margin-bottom: 25px;
+            font-size: 33px;
+            color: #333;
+            line-height: 130%;
+            font-weight: 300;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            &::after {
+                content: '';
+                width: 5px;
+                height: 5px;
+                background: #c40f39;
+                display: block;
+                position: absolute;
+                right: -2px;
+                bottom: -3px;
+                z-index: 3;
+            }
+            & .year {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            & .redText {
+                color: #c40f39;
+            }
+        }
+        & > dl {
+            padding-right: 60px;
+            padding-bottom: 10px;
+            & dt {
+                float: right;
+                width: 54px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                color: #c40f39;
+                font-weight: 500;
+                line-height: 130%;
+            }
+            & dd {
+                font-size: 14px;
+                color: #777;
+            }
+        }
+    }
+    & .img_r {
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 178px;
+        margin-left: 60px;
+    }
+
+    & .area2 {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background: #f8f8f8;
+        margin-top: 150px;
+        & .area_r {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            z-index: 3;
+            & .area_r_title {
+                padding-left: 60px;
+                padding-bottom: 25px;
+                padding-top: 60px;
+                margin-bottom: 25px;
+                font-size: 33px;
+                color: #333;
+                line-height: 130%;
+                font-weight: 300;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    background: #c40f39;
+                    display: block;
+                    position: absolute;
+                    left: -2px;
+                    bottom: -3px;
+                    z-index: 3;
+                }
+                & .year {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 15px;
+                    margin-left: 10px;
+                }
+                & .redText {
+                    color: #c40f39;
+                }
+            }
+            & > dl {
+                padding-left: 60px;
+                padding-bottom: 10px;
+                & dt {
+                    float: left;
+                    width: 54px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 15px;
+                    color: #c40f39;
+                    font-weight: 500;
+                    line-height: 130%;
+                }
+                & dd {
+                    font-size: 14px;
+                    color: #777;
+                }
+            }
+        }
+    }
+    & .img_l {
+        position: absolute;
+        right: 50%;
+        top: 178px;
+        margin-right: 60px;
+    }
+
+`;
+
+const HistoryCenterLine = styled.div`
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    transform: translateX(-50%);
+    background: #ddd;
+    width: 1px;
+    height: 100%;
+`;
+
 const Introduce = () => {
 
     const CeoArea = () => {
 
-        const [activeTab2, setActiveTab2] = useState('company');
+        const [activeTab2, setActiveTab2] = useState('history');
 
         const handleTabClick2 = (tab) => {
             setActiveTab2(tab);
@@ -627,6 +771,102 @@ const Introduce = () => {
                             </IntroduceCompany>
                         </>
                     )
+                case 'history' :
+                    return(
+                        <>
+                            <IntroduceTitle>
+                                MONAMI <span>HISTORY</span>
+                            </IntroduceTitle>
+                            <IntroduceHistory>
+                                <div className='area1'>
+                                    <div className='area_l'>
+                                        <div className='area_l_title'>
+                                            문화를 선도하는 <br />
+                                            <span className='year'>2021 ~ 2024</span> 기업으로의 <span className='redText'>도약</span>
+                                        </div>
+                                        <dl>
+                                            <dt>2024</dt>
+                                            <dd>모나미 컨셉스토어 수원점 오픈</dd>
+                                            <dd style={{paddingRight: "54px"}}>사무용품 브랜드 LOBDA(롭다) 론칭</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2023</dt>
+                                            <dd>모나미 패션 랩 브랜드 런칭 </dd>
+                                            <dd style={{paddingRight: "54px"}}>153 ID 만년필, 153 리스펙트 리파인 출시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2022</dt>
+                                            <dd>모나미 컨셉스토어 성수점 오픈 </dd>
+                                            <dd style={{paddingRight: "54px"}}>모나미 코스메틱 용인 공장 신축</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2021</dt>
+                                            <dd>디자인 문구 브랜드 제니스(Zenith), 지퀀스(ZEQUENZ) 론칭</dd>
+                                            <dd style={{paddingRight: "54px"}}>모나미몰 쇼핑 앱 출시</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_r'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img7.png`} alt='history_img7' />
+                                    </div>
+                                </div>
+                                <div className='area2'>
+                                    <div className='area_r'>
+                                        <div className='area_r_title'>
+                                            새로운 <br />
+                                            50년의 <span className='redText'>시작</span><span className='year'>2010 ~ 2020</span>
+                                        </div>
+                                        <dl>
+                                            <dt>2020</dt>
+                                            <dd>모나미 창립 60주년 기념 프러스펜 3000 데스크펜, 프러스펜 3000 60색 세트 출시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2019</dt>
+                                            <dd>모나미 컨셉스토어 인사동점 오픈</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2018</dt>
+                                            <dd>대한민국 디자인 대상 디자인 경영부문 국무총리상 수상 </dd>
+                                            <dd style={{paddingLeft: "54px"}}>모나미 스토어 오픈 (롯데백화점 부산점/평촌점, MCC 합정)</dd>
+                                            <dd style={{paddingLeft: "54px"}}>153 고급필기구 런칭 (153 NEO 만년필)</dd>
+                                            <dd style={{paddingLeft: "54px"}}>모나미 타일랜드 아마타공장 증축</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2017</dt>
+                                            <dd>153 고급 필기구 런칭(153 GOLD)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2016</dt>
+                                            <dd>모나미 컨셉스토어 2호점(DDP) / 3호점(에버랜드) 오픈</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2015</dt>
+                                            <dd>국내문구업계 최초 모나미 컨셉스토어 1호점 오픈 (서울 합정동)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2014</dt>
+                                            <dd>153 고급 필기구 런칭 (153 리미티드, 153 ID, 153 리스펙트)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2013</dt>
+                                            <dd>153 볼펜 출시 50년 / 프러스펜 S 출시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2012</dt>
+                                            <dd>기업용 홍보 통합 제작 서비스 MPOD 솔루션 설립</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2010</dt>
+                                            <dd>모나미 창립 50주년 / 모나미 타일랜드 아마타공장 신축</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_l'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img1.png`} alt='history_img1' />
+                                    </div>
+                                </div>
+                                <HistoryCenterLine></HistoryCenterLine>
+                            </IntroduceHistory>
+                        </>
+                    )
                 default :
                     return(<></>)
             }
@@ -651,7 +891,7 @@ const Introduce = () => {
                                 <li onClick={()=>{handleTabClick2('company')}} className={activeTab2 === 'company' ? 'zmfflr' : ''}>
                                     회사정보
                                 </li>
-                                <li>
+                                <li onClick={()=>{handleTabClick2('history')}} className={activeTab2 === 'history' ? 'zmfflr' : ''}>
                                     회사연혁
                                 </li>
                                 <li>
