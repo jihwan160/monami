@@ -344,6 +344,7 @@ const IntroduceCompany = styled.div`
 
 const IntroduceHistory = styled.div`
     position: relative;
+
     &  .area_l {
         width: 50%;
         text-align: right;
@@ -404,13 +405,7 @@ const IntroduceHistory = styled.div`
         margin-left: 60px;
     }
 
-    & .area2 {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        background: #f8f8f8;
-        margin-top: 150px;
-        & .area_r {
+    & .area_r {
             width: 100%;
             position: absolute;
             left: 50%;
@@ -464,13 +459,51 @@ const IntroduceHistory = styled.div`
                     color: #777;
                 }
             }
-        }
     }
     & .img_l {
         position: absolute;
         right: 50%;
         top: 178px;
         margin-right: 60px;
+    }
+
+    & .area2 {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background: #f8f8f8;
+        margin-top: 150px;
+    }
+
+    & .area3 {
+        height: 500px;
+        position: relative;
+    }
+
+    & .area4 {
+        position: relative;
+        width: 100%;
+        height: 560px;
+        background: #f8f8f8;
+        /* margin-top: 150px; */
+    }
+
+    & .area5 {
+        height: 500px;
+        position: relative;
+    }
+
+    & .area6 {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        background: #f8f8f8;
+        /* margin-top: 150px; */
+    }
+
+    & .area7 {
+        height: 600px;
+        position: relative;
     }
 
 `;
@@ -861,6 +894,149 @@ const Introduce = () => {
                                     </div>
                                     <div className='img_l'>
                                         <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img1.png`} alt='history_img1' />
+                                    </div>
+                                </div>
+                                <div className='area3'>
+                                    <div className='area_l'>
+                                        <div className='area_l_title'>
+                                            사무용품 유통서비스 <br />
+                                            <span className='year'>2006 ~ 2009</span> 기업으로의 <span className='redText'>도약</span>
+                                        </div>
+                                        <dl>
+                                            <dt>2009</dt>
+                                            <dd>프로유성매직 국내문구 최초 RED DOT AWARD 수상</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2008</dt>
+                                            <dd>모나미스테이션 사업개시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2007</dt>
+                                            <dd>세계최초 생잉크 보드마커 시그마플로 출시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2006</dt>
+                                            <dd>MIS(모나미이미징솔루션)설립</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_r'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img2.png`} alt='history_img2' />
+                                    </div>
+                                </div>
+                                <div className='area4'>
+                                    <div className='area_r'>
+                                        <div className='area_r_title'>
+                                            글로벌 <br />
+                                            기업으로서의 <span className='redText'>도약</span><span className='year'>2000 ~ 2001</span>
+                                        </div>
+                                        <dl>
+                                            <dt>2001</dt>
+                                            <dd>상해 모나미 문화용품 유한공사 (중국현지법인) 설립</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2001</dt>
+                                            <dd>Zenith-MonAmi 설립 (폴란드 합작법인)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2001</dt>
+                                            <dd>e-비지니스 사업부 신설</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2000</dt>
+                                            <dd>(주)익스프레스라인 14와 합병</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_l'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img3.png`} alt='history_img3' />
+                                    </div>
+                                </div>
+                                <div className='area5'>
+                                    <div className='area_l'>
+                                        <div className='area_l_title'>
+                                            사업진출 <br />
+                                            <span className='year'>1990 ~ 1996</span><span className='redText'>다각화</span>
+                                        </div>
+                                        <dl>
+                                            <dt>1996</dt>
+                                            <dd>(주)모나미로 (주)모나미 애드 합병</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1992</dt>
+                                            <dd>(주)모나미 애드 / 항소 인터내셔널 (미국)설립</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1990</dt>
+                                            <dd>(주)항소 설립</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1990</dt>
+                                            <dd>모나미 데이타 시스템 설립 (1992년 모나미컴퓨터시스템으로 변경)</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_r'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img4.png`} alt='history_img4' />
+                                    </div>
+                                </div>
+                                <div className='area6'>
+                                    <div className='area_r'>
+                                        <div className='area_r_title'>
+                                            모나미의 <br />
+                                            <span className='redText'>성장기</span><span className='year'>1970 ~ 1989</span>
+                                        </div>
+                                        <dl>
+                                            <dt>1989</dt>
+                                            <dd>모나미 타일랜드 출범 (태국 차이아난다사와 합작)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1988</dt>
+                                            <dd>안산 공장 신축, 이전(1,2 공장 통합)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1974</dt>
+                                            <dd>주식회사 모나미로 상호변경 / 증권 거래소 주식 상장</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1970</dt>
+                                            <dd>모나미 쎌라 만년필(주) 흡수합병</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1970</dt>
+                                            <dd>제2공장 신축(성수동)</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_l'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img5.png`} alt='history_img5' />
+                                    </div>
+                                </div>
+                                <div className='area7'>
+                                    <div className='area_l'>
+                                        <div className='area_l_title'>
+                                            모나미의 창업과 <br />
+                                            <span className='year'>1960 ~ 1967</span><span className='redText'>도약기</span>
+                                        </div>
+                                        <dl>
+                                            <dt>1967</dt>
+                                            <dd>모나미 화학 공업 주식회사 설립</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1963</dt>
+                                            <dd>제1공장 신축(성수동)</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1963</dt>
+                                            <dd>사인펜, 매직펜 생산</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1963</dt>
+                                            <dd>153 볼펜 생산개시</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>1960</dt>
+                                            <dd>광신 화학 공업사 설립 (회화구류 생산 시작)</dd>
+                                        </dl>
+                                    </div>
+                                    <div className='img_r'>
+                                        <img src={`${process.env.PUBLIC_URL}img/introduce/history/history_img6.png`} alt='history_img6' />
                                     </div>
                                 </div>
                                 <HistoryCenterLine></HistoryCenterLine>
