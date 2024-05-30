@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Header from '../Home/Header'
 import Footer from '../Home/Footer'
 import styled from 'styled-components'
+import Top from '../Home/Top';
+import { useLocation } from 'react-router-dom';
 
 const IntroduceContainer = styled.div`
     padding-bottom: 150px;
@@ -398,7 +400,6 @@ const IntroduceHistory = styled.div`
         }
     }
     & .img_r {
-        width: 50%;
         position: absolute;
         left: 50%;
         top: 178px;
@@ -406,7 +407,7 @@ const IntroduceHistory = styled.div`
     }
 
     & .area_r {
-            width: 100%;
+            width: 50%;
             position: absolute;
             left: 50%;
             z-index: 3;
@@ -523,15 +524,19 @@ const Introduce = () => {
 
     const CeoArea = () => {
 
-        const [activeTab2, setActiveTab2] = useState('history');
+        const [activeTab2, setActiveTab2] = useState('ceo');
 
         const handleTabClick2 = (tab) => {
             setActiveTab2(tab);
         }
 
+        const location = useLocation();
+
+        const {param} = location.state || {};
+
         const renderContent = () => {
 
-            switch(activeTab2) {
+            switch(param) {
                 case 'ceo' :
                     return(
                         <>
@@ -1101,6 +1106,7 @@ const Introduce = () => {
                 <Header />
                 <MonamiIntroduce />
                 <Footer />
+                <Top />
             </>
         )
     }
