@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import Header from '../Home/Header'
-import Footer from '../Home/Footer'
-import styled from 'styled-components'
+import Header from '../Home/Header';
+import Footer from '../Home/Footer';
 import Top from '../Home/Top';
+import styled from 'styled-components';
+
 
 const IntroduceContainer = styled.div`
     padding-bottom: 150px;
@@ -519,11 +520,11 @@ const HistoryCenterLine = styled.div`
     height: 100%;
 `;
 
-const Introduce = () => {
+const History = () => {
 
     const CeoArea = () => {
 
-        const [activeTab2, setActiveTab2] = useState('ceo');
+        const [activeTab2, setActiveTab2] = useState('history');
 
         const handleTabClick2 = (tab) => {
             setActiveTab2(tab);
@@ -1114,4 +1115,4 @@ const Introduce = () => {
     )
 }
 
-export default Introduce
+export default History

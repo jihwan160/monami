@@ -178,11 +178,6 @@ const Header = () => {
             setClick(!click)
         }
 
-        const handleParam = (param) => {
-            navigate('/introduce', {state : {param}})
-            console.log(param)
-        }
-
 
         return(
             <div>
@@ -192,15 +187,15 @@ const Header = () => {
                     </Logo>
                     <GnbList>
                         <li className={click ? 'disabled-hover gnb' : 'gnb'}>
-                            <span onClick={()=> handleParam('ceo')}>모나미소개</span>
+                            <span onClick={()=> navigate('/introduce')}>모나미소개</span>
                             <div className='subMenu'>
-                                <p onClick={()=> handleParam('ceo')} >
+                                <p onClick={()=> navigate('/introduce')} >
                                     <Link to="#" className='menu'>CEO 메시지</Link>
                                 </p>
-                                <p onClick={()=> handleParam('company')}>
+                                <p onClick={()=> navigate('/company')}>
                                     <Link to="#" className='menu'>회사정보</Link>
                                 </p>
-                                <p onClick={()=> handleParam('history')}>
+                                <p onClick={()=> navigate('/history')}>
                                     <Link to="#" className='menu'>회사연혁</Link>
                                 </p>
                                 <p>
