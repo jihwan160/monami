@@ -172,7 +172,6 @@ const IntroduceWrap = styled.div`
     }
 
 `;
-
 // COMPANY
 const IntroduceCompany = styled.div`
     
