@@ -176,7 +176,7 @@ const IntroduceWrap = styled.div`
 const IntroduceCompany = styled.div`
     
     & .info1 {
-        max-width: 1400px;
+        max-width: 1400px; 
         margin: 0 auto;
         & .num_title {
             font-size: 23px;
