@@ -262,7 +262,7 @@ const IntroduceCompany = styled.div`
     }
 
     & .info2 {
-        max-width: 1400px;
+        max-width: 1400px; 
         margin: 130px auto;
         & .num_title {
             font-size: 23px;
