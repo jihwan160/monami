@@ -198,7 +198,7 @@ const IntroduceCompany = styled.div`
                 color: #fff;
             }
         }
-        & .subsidiary {
+        & .subsidiary { 
             &::after {
                 content: '';
                 display: block;
